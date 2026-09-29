@@ -2,34 +2,29 @@ package org.example;
 import java.util.Scanner;
 
 // Vetores e Matrizes
-// Atividade 1 - Produção de Milho por Semana
+// Atividade 2 - Temperatura em estufa
 
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        double[] prod = new double[7];
+        double[] temperatura = new double[10];
+        int diasAcima30 = 0;
 
-        double total = 0;
-        double maior = 0;
+        System.out.println("==Registro de Temperatura da Estufa==");
 
-        for (int i = 0; i < prod.length; i++) {
+        for (int i = 0; i < temperatura.length; i++) {
+            System.out.print("Digite qual a temperatura do dia " + (i + 1) + " (°C): ");
+            temperatura[i] = entrada.nextDouble();
 
-            System.out.print("Informe a produção da semana " + (i + 1) + ", em toneladas: ");
-            prod[i] = entrada.nextDouble();
-
-            total += prod[i];
-
-            if (i == 0 || prod[i] > maior) {
-                maior = prod[i];
+            if (temperatura[i] > 30.0) {
+                diasAcima30++;
             }
         }
 
-        double media = total / prod.length;
+        System.out.println("\n==Registro Final==");
+        System.out.println("Total de dias com temperatura acima de 30°C: " + diasAcima30);
 
-        System.out.println("==RESULTADOS==");
-        System.out.println("Produção total: " + total + " toneladas");
-        System.out.println("Média semanal: " + media + " toneladas");
-        System.out.println("Maior produção registrada: " + maior + " toneladas");
+        entrada.close();
     }
 }
