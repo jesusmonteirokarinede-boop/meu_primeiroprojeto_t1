@@ -2,16 +2,23 @@ package org.example;
 import java.util.Scanner;
 
 // Exercicios de estrutura de decisão
-// Exercício 9 - Auxilio para Curso de idiomas
+// Exercício 10 - Aprovação de Empréstimo Pessoal
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Informe o cargo do funcionário:");
-        String cargo = entrada.nextLine();
-        if (cargo.equalsIgnoreCase("administrativo") || cargo.equalsIgnoreCase("liderança") || cargo.equalsIgnoreCase("lideranca")) {
-            System.out.println("Você pode participar do programa de idiomas.");
+
+        System.out.println("Digite o salário do cliente:");
+        double salario = entrada.nextDouble();
+
+        System.out.println("Informe o valor da parcela desejada:");
+        double parcela = entrada.nextDouble();
+
+        double limite = salario * 0.30;
+
+        if (parcela <= limite) {
+            System.out.println("Empréstimo aprovado.");
         } else {
-            System.out.println("Você não tem acesso ao programa de idiomas no momento.");
+            System.out.println("Empréstimo recusado. A parcela excede 30% do salário.");
         }
     }
 }
