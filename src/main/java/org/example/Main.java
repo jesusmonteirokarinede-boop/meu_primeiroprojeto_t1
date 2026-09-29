@@ -1,19 +1,19 @@
 package org.example;
 import java.util.Scanner;
 
-// Exercicios
-// Questão 1-Verificar Maior idade
+// Exercicio estrutura de decisão
+// Questão 2 -Aprovação do aluno
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        int idade;
-        System.out.println("Informe sua idade:");
-        idade = entrada.nextInt();
+        double nota;
+        System.out.println("Informe sua nota:");
+        nota = entrada.nextDouble();
 
-        if (idade >=18 ){
-            System.out.println("Você é maior de idade");
+        if (nota >=7 ){
+            System.out.println("Aprovado!");
         } else {
-            System.out.println("Você é menor de idade");
+            System.out.println("Reprovado!");
         }
     }
 }
