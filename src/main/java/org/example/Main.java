@@ -2,23 +2,23 @@ package org.example;
 import java.util.Scanner;
 
 // Exercicios de estrutura de decisão
-// Exercício 10 - Aprovação de Empréstimo Pessoal
+// Exercício 11 - Classificação de Clientes por Investimento
+
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Digite o salário do cliente:");
-        double salario = entrada.nextDouble();
+        System.out.println("Digite o valor que foi investido pelo cliente (R$):");
+        double investimento = entrada.nextDouble();
 
-        System.out.println("Digite o valor da parcela desejada:");
-        double parcela = entrada.nextDouble();
-
-        double limite = salario * 0.30;
-
-        if (parcela <= limite) {
-            System.out.println("Empréstimo aprovado.");
+        if (investimento <= 10000) {
+            System.out.println("Classificação do cliente: Bronze");
+        } else if (investimento <= 50000) {
+            System.out.println("Classificação do cliente: Prata");
+        } else if (investimento <= 100000) {
+            System.out.println("Classificação do cliente: Ouro");
         } else {
-            System.out.println("Empréstimo recusado. A parcela excede 30% do salário.");
+            System.out.println("Classificação do cliente: Platinum");
         }
     }
 }
