@@ -10,7 +10,7 @@ public class Main {
         System.out.println("Digite o salário do cliente:");
         double salario = entrada.nextDouble();
 
-        System.out.println("Informe o valor da parcela desejada:");
+        System.out.println("Digite o valor da parcela desejada:");
         double parcela = entrada.nextDouble();
 
         double limite = salario * 0.30;
