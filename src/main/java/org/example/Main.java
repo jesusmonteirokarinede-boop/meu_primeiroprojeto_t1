@@ -1,31 +1,18 @@
 package org.example;
 
-import java.util.Scanner;
-
-//Estrtura de repetição
-// Exercício 5 - Caixa de Supermercado
-
+// Vetores e Matrizes - exemplo
+// Valores inteiros
 
 public class Main {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        double valor, soma;
-        String continuar;
-
-        soma = 0;
-        do {
-            System.out.println("Digite o valor do produto: ");
-            valor = entrada.nextDouble();
-            soma = soma + valor;
-            System.out.println("Continuar? (y)");
-
-            entrada.nextLine(); // limpa o buffer
-            continuar = entrada.nextLine();
-        } while (continuar.equals("y") || continuar.equals("Y"));
-
-        System.out.println("Total da compra: " + soma );
+        int[] numeros = new int[5];
+        numeros[0] = 1;
+        numeros[1] = 2;
+        numeros[2] = 3;
+        numeros[3] = 4;
+        numeros[4] = 5;
+        System.out.println(numeros[3]);
 
     }
-
 
 }
