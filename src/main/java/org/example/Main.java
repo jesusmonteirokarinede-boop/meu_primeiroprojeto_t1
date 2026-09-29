@@ -1,24 +1,42 @@
 package org.example;
 import java.util.Scanner;
 
-// Exercicios
-// Questão 4 - Classificação de Desempenho
+// Exercicios de estrutura de decisão
+// Questão 5 - Dia da semana
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        double nota;
-        System.out.println("Digite a nota: ");
-        nota = entrada.nextDouble();
+        int dia;
+        System.out.println("Diga um número entre 1 e 7: ");
+        dia = entrada.nextInt();
 
 
-        if (nota >= 9){
-            System.out.println("Muito bom!");
-        } else if (nota >= 7) {
-            System.out.println("Bom");
-        } else if (nota >= 5) {
-            System.out.println("Regular");
-        } else {
-            System.out.println("Irregular");
+        switch (dia) {
+            case 1:
+                System.out.println("Domingo");
+                break;
+            case 2:
+                System.out.println("Segunda");
+                break;
+            case 3:
+                System.out.println("Terça");
+                break;
+            case 4:
+                System.out.println("Quarta");
+                break;
+            case 5:
+                System.out.println("Quinta");
+                break;
+            case 6:
+                System.out.println("Sexta");
+                break;
+            case 7:
+                System.out.println("Sábado");
+                break;
+            default:
+                System.out.println("Valor inválido");
+
         }
+
     }
 }
