@@ -1,17 +1,14 @@
 package org.example;
 
-// Vetores e Matrizes - exemplo
-// Valores inteiros
+// Vetores e Matrizes - exemplos
+// Valores double
 
 public class Main {
     public static void main(String[] args) {
-        int[] numeros = new int[5];
-        numeros[0] = 1;
-        numeros[1] = 2;
-        numeros[2] = 3;
-        numeros[3] = 4;
-        numeros[4] = 5;
-        System.out.println(numeros[3]);
+        double[] moedas = new double[2];
+        moedas[0] = 3.56;
+        moedas[1] = 2.45;
+        System.out.println(moedas[1]);
 
     }
 
