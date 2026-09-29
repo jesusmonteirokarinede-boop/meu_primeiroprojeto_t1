@@ -1,14 +1,15 @@
 package org.example;
 
 // Vetores e Matrizes - exemplos
-// Valores double
+// Valores char
 
 public class Main {
     public static void main(String[] args) {
-        double[] moedas = new double[2];
-        moedas[0] = 3.56;
-        moedas[1] = 2.45;
-        System.out.println(moedas[1]);
+        char[] sigla = new char[3];
+        sigla[0] = 'A';
+        sigla[1] = 'B';
+        sigla[2] = 'C';
+        System.out.println(sigla[2]);
 
     }
 
