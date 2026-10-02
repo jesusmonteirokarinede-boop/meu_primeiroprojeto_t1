@@ -2,29 +2,30 @@ package org.example;
 import java.util.Scanner;
 
 // Vetores e Matrizes
-// Atividade 2 - Temperatura em estufa
+// Atividade 3 - Consumo de Água na Irrigação
 
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        double[] temperatura = new double[10];
-        int diasAcima30 = 0;
+        double[] consumo = new double[12];
 
-        System.out.println("==Registro de Temperatura da Estufa==");
+        double maior =0;
+        int setor = 0;
 
-        for (int i = 0; i < temperatura.length; i++) {
-            System.out.print("Digite qual a temperatura do dia " + (i + 1) + " (°C): ");
-            temperatura[i] = entrada.nextDouble();
+        for (int i = 0; i < consumo.length; i++) {
 
-            if (temperatura[i] > 30.0) {
-                diasAcima30++;
+            System.out.print("Informe o consumo de água do setor  " + (i + 1) + ", em litros: ");
+            consumo[i] = entrada.nextDouble();
+
+
+            if (i==0 || consumo[i] > maior) {
+                maior = consumo[i];
+                setor = i + 1;
             }
         }
 
-        System.out.println("\n==Registro Final==");
-        System.out.println("Total de dias com temperatura acima de 30°C: " + diasAcima30);
-
-        entrada.close();
+        System.out.println("Setor com maior consumo de água: " + setor);
+        System.out.println("Maior consumo: " + maior + " litros");
     }
 }
