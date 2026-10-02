@@ -2,30 +2,28 @@ package org.example;
 import java.util.Scanner;
 
 // Vetores e Matrizes
-// Atividade 3 - Consumo de Água na Irrigação
+// Atividade 4 - Produção de Hortaliças por Talhão
 
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        double[] prod = new double[5];
+        double total = 0;
 
-        double[] consumo = new double[12];
+        for (int i = 0; i < prod.length; i++) {
 
-        double maior =0;
-        int setor = 0;
+            System.out.print("Informe a produção de Hortaliças por talhão " + (i + 1) + ", em kg: ");
+            prod[i] = entrada.nextDouble();
 
-        for (int i = 0; i < consumo.length; i++) {
-
-            System.out.print("Informe o consumo de água do setor  " + (i + 1) + ", em litros: ");
-            consumo[i] = entrada.nextDouble();
-
-
-            if (i==0 || consumo[i] > maior) {
-                maior = consumo[i];
-                setor = i + 1;
-            }
+            total += prod[i];
         }
 
-        System.out.println("Setor com maior consumo de água: " + setor);
-        System.out.println("Maior consumo: " + maior + " litros");
+        System.out.println("===PRODUÇÃO POR TALHÃO=== ");
+
+        for (int i = 0; i < prod.length; i++) {
+            System.out.println("Talhão " + (i + 1) + ": " + prod[i] + " kg");
+        }
+
+        System.out.println("TOTAL GERAL PRODUZIDOS: " + total + " kg");
     }
 }
