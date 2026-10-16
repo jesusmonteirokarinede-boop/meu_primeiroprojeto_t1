@@ -2,18 +2,18 @@ package org.example;
 import java.util.Scanner;
 
 //Lista de Exercicios sobre função
-//Exercício 2: Função que soma dois números
+//Exercício 3: Função para calcular o dobro de um número
 
 public class Main {
-    public static int soma(int a, int b) {
-        return a + b;
+    public static int dobro(int numero) {
+        return numero * 2;
     }
     public static void main(String[] args) {
-        int num1 = 10;
-        int num2 = 15;
+        int numero1 = 9;
 
-        int resultado = soma(num1, num2);
-        System.out.println("A soma entre os dois números é de: " + resultado);
+
+        int resultado = dobro(numero1);
+        System.out.println("O dobro de " + numero1 + " é igual:" + resultado);
 
     }
 }
