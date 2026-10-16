@@ -2,38 +2,35 @@ package org.example;
 import java.util.Scanner;
 
 // Vetores e Matrizes
-// Atividade 8 - Controle de Praga
+// Atividade 9 - Mapa de Fertilidade do Solo
 
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        int[][] matriz = new int[5][5];
+        int[][] matriz = new int[6][6];
 
-        int maior = 0;
-        int linhaM = 0;
-        int colunaM = 0;
+        System.out.println("Informe os índices de fertilidade:");
 
-        System.out.println("Digite a quantidade de focos de pragas:");
-
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
                 System.out.print("Região [" + i + "][" + j + "]: ");
                 matriz[i][j] = entrada.nextInt();
-
-                if (matriz[i][j] > maior) {
-                    maior = matriz[i][j];
-                    linhaM = i;
-                    colunaM = j;
-                }
             }
         }
 
-        System.out.println("REGIÃO COM A MAIOR QUANTIDADE DE FOCO:");
-        System.out.println("Linha: " + linhaM);
-        System.out.println("Coluna: " + colunaM);
-        System.out.println("Quantidade de focos: " + maior);
+        System.out.println("Média sobre fertilidade de cada linha:");
 
+        for (int i = 0; i < 6; i++) {
+            int soma = 0;
+
+            for (int j = 0; j < 6; j++) {
+                soma += matriz[i][j];
+            }
+
+            double media = (double) soma / 6;
+            System.out.println("Linha " + (i + 1) + ": " + media);
+        }
 
     }
 }
