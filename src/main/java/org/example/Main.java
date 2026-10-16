@@ -2,33 +2,37 @@ package org.example;
 import java.util.Scanner;
 
 // Vetores e Matrizes
-// Atividade 7 - Monitoramento de Chuva
+// Atividade 8 - Controle de Praga
 
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        double[][] chuva = new double[7][4];
-        double[] totalPorArea = new double[4];
+        int[][] matriz = new int[5][5];
 
-        for (int dia = 0; dia < 7; dia++) {
-            System.out.printf("Registro do Dia %d \n", dia + 1);
-            for (int area = 0; area < 4; area++) {
-                System.out.printf("Informe a quantidade de chuva registrada na Área %d (mm): ", area + 1);
-                chuva[dia][area] = entrada.nextDouble();
+        int maior = 0;
+        int linhaM = 0;
+        int colunaM = 0;
+
+        System.out.println("Digite a quantidade de focos de pragas:");
+
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print("Região [" + i + "][" + j + "]: ");
+                matriz[i][j] = entrada.nextInt();
+
+                if (matriz[i][j] > maior) {
+                    maior = matriz[i][j];
+                    linhaM = i;
+                    colunaM = j;
+                }
             }
         }
 
-        for (int area = 0; area < 4; area++) {
-            for (int dia = 0; dia < 7; dia++) {
-                totalPorArea[area] += chuva[dia][area];
-            }
-        }
-
-        System.out.println(" Total de Chuva por Área (em mm)");
-        for (int area = 0; area < 4; area++) {
-            System.out.printf("Área %d: %.2f mm\n", (area + 1), totalPorArea[area]);
-        }
+        System.out.println("REGIÃO COM A MAIOR QUANTIDADE DE FOCO:");
+        System.out.println("Linha: " + linhaM);
+        System.out.println("Coluna: " + colunaM);
+        System.out.println("Quantidade de focos: " + maior);
 
 
     }
